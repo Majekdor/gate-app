@@ -7,18 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		458C1162293D58550015474C /* GateAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C1161293D58550015474C /* GateAppApp.swift */; };
+		4569D2EA293D7C5600FCACFC /* EventSource in Frameworks */ = {isa = PBXBuildFile; productRef = 4569D2E9293D7C5600FCACFC /* EventSource */; };
+		458C1162293D58550015474C /* GateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C1161293D58550015474C /* GateApp.swift */; };
 		458C1164293D58550015474C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C1163293D58550015474C /* ContentView.swift */; };
 		458C1166293D585B0015474C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458C1165293D585B0015474C /* Assets.xcassets */; };
 		458C1169293D585B0015474C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458C1168293D585B0015474C /* Preview Assets.xcassets */; };
+		458C1189293D5A950015474C /* GateInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C1188293D5A950015474C /* GateInfoView.swift */; };
+		458C118B293D5B5F0015474C /* GateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C118A293D5B5F0015474C /* GateModel.swift */; };
+		458C118D293D5C6F0015474C /* GateAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C118C293D5C6F0015474C /* GateAppViewModel.swift */; };
+		458C118F293D5FBE0015474C /* SettingsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C118E293D5FBE0015474C /* SettingsSheetView.swift */; };
+		45C7471D294E4BFF00F9F649 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7471C294E4BFF00F9F649 /* Extensions.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		458C1187293D58D10015474C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		458C115E293D58550015474C /* GateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		458C1161293D58550015474C /* GateAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateAppApp.swift; sourceTree = "<group>"; };
+		458C1161293D58550015474C /* GateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateApp.swift; sourceTree = "<group>"; };
 		458C1163293D58550015474C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		458C1165293D585B0015474C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		458C1168293D585B0015474C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		458C1177293D58C70015474C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		458C1188293D5A950015474C /* GateInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateInfoView.swift; sourceTree = "<group>"; };
+		458C118A293D5B5F0015474C /* GateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateModel.swift; sourceTree = "<group>"; };
+		458C118C293D5C6F0015474C /* GateAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateAppViewModel.swift; sourceTree = "<group>"; };
+		458C118E293D5FBE0015474C /* SettingsSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSheetView.swift; sourceTree = "<group>"; };
+		45C7471C294E4BFF00F9F649 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4569D2EA293D7C5600FCACFC /* EventSource in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				458C1160293D58550015474C /* GateApp */,
+				458C1174293D58C70015474C /* Frameworks */,
 				458C115F293D58550015474C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,10 +78,15 @@
 		458C1160293D58550015474C /* GateApp */ = {
 			isa = PBXGroup;
 			children = (
-				458C1161293D58550015474C /* GateAppApp.swift */,
+				458C1161293D58550015474C /* GateApp.swift */,
 				458C1163293D58550015474C /* ContentView.swift */,
 				458C1165293D585B0015474C /* Assets.xcassets */,
 				458C1167293D585B0015474C /* Preview Content */,
+				458C1188293D5A950015474C /* GateInfoView.swift */,
+				458C118A293D5B5F0015474C /* GateModel.swift */,
+				458C118C293D5C6F0015474C /* GateAppViewModel.swift */,
+				458C118E293D5FBE0015474C /* SettingsSheetView.swift */,
+				45C7471C294E4BFF00F9F649 /* Extensions.swift */,
 			);
 			path = GateApp;
 			sourceTree = "<group>";
@@ -67,6 +99,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		458C1174293D58C70015474C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				458C1177293D58C70015474C /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,12 +117,16 @@
 				458C115A293D58550015474C /* Sources */,
 				458C115B293D58550015474C /* Frameworks */,
 				458C115C293D58550015474C /* Resources */,
+				458C1187293D58D10015474C /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = GateApp;
+			packageProductDependencies = (
+				4569D2E9293D7C5600FCACFC /* EventSource */,
+			);
 			productName = GateApp;
 			productReference = 458C115E293D58550015474C /* GateApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +155,9 @@
 				Base,
 			);
 			mainGroup = 458C1155293D58550015474C;
+			packageReferences = (
+				4569D2E8293D7C5600FCACFC /* XCRemoteSwiftPackageReference "EventSource" */,
+			);
 			productRefGroup = 458C115F293D58550015474C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +184,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				458C118B293D5B5F0015474C /* GateModel.swift in Sources */,
 				458C1164293D58550015474C /* ContentView.swift in Sources */,
-				458C1162293D58550015474C /* GateAppApp.swift in Sources */,
+				458C118D293D5C6F0015474C /* GateAppViewModel.swift in Sources */,
+				458C1162293D58550015474C /* GateApp.swift in Sources */,
+				458C1189293D5A950015474C /* GateInfoView.swift in Sources */,
+				458C118F293D5FBE0015474C /* SettingsSheetView.swift in Sources */,
+				45C7471D294E4BFF00F9F649 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,16 +322,18 @@
 				DEVELOPMENT_TEAM = 8XQR9YKLCL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Gates;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.donniebarnes.GateApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -299,16 +353,18 @@
 				DEVELOPMENT_TEAM = 8XQR9YKLCL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Gates;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.donniebarnes.GateApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -339,6 +395,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4569D2E8293D7C5600FCACFC /* XCRemoteSwiftPackageReference "EventSource" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/inaka/EventSource.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4569D2E9293D7C5600FCACFC /* EventSource */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4569D2E8293D7C5600FCACFC /* XCRemoteSwiftPackageReference "EventSource" */;
+			productName = EventSource;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 458C1156293D58550015474C /* Project object */;
 }
