@@ -93,7 +93,9 @@ struct ContentView: View {
                     impact.impactOccurred()
                     
                     Task {
-                        await self.openConnection()
+                        if eventSource == nil {
+                            await self.openConnection()
+                        }
                         await sendCommand(command: "getstate", argument: "")
                     }
                 }, label: {
@@ -123,7 +125,9 @@ struct ContentView: View {
         }
         .onAppear {
             Task {
-                await self.openConnection()
+                if eventSource == nil {
+                    await self.openConnection()
+                }
             }
         }
         .onTapGesture {
