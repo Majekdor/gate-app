@@ -93,10 +93,10 @@ struct ContentView: View {
                     impact.impactOccurred()
                     
                     Task {
-                        if eventSource == nil {
-                            await self.openConnection()
+                        await self.openConnection()
+                        if eventSource != nil {
+                            await sendCommand(command: "getstate", argument: "")
                         }
-                        await sendCommand(command: "getstate", argument: "")
                     }
                 }, label: {
                     Text("Update")
@@ -125,9 +125,7 @@ struct ContentView: View {
         }
         .onAppear {
             Task {
-                if eventSource == nil {
-                    await self.openConnection()
-                }
+                await self.openConnection()
             }
         }
         .onTapGesture {
@@ -137,6 +135,10 @@ struct ContentView: View {
     
     /// Open a connection to the cloud to receive server sent events regarding each gate's status.
     func openConnection() async {
+        if self.eventSource != nil || self.gateAppViewModel.authorizationHeader.isEmpty {
+            return
+        }
+        
         let url = URL(string: "https://api.particle.io/v1/devices/events")!
         
         eventSource = EventSource(url: url, headers: ["Authorization" : self.gateAppViewModel.authorizationHeader])

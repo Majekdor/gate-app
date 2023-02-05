@@ -26,7 +26,7 @@ struct SettingsSheetView: View {
                         },
                         set: { newValue in
                             self.gateAppViewModel.authorizationHeader = newValue
-                            UserDefaults.standard.set(newValue, forKey: "authorizationHeader")
+                            UserDefaults(suiteName: "group.gateapp")?.set(newValue, forKey: "authorizationHeader")
                         }
                     )
                 )

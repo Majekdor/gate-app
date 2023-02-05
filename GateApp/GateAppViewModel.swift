@@ -11,7 +11,7 @@ class GateAppViewModel: ObservableObject {
     
     static let shared = GateAppViewModel()
     
-    @Published var authorizationHeader: String = UserDefaults.standard.string(forKey: "authorizationHeader") ?? ""
+    @Published var authorizationHeader: String = UserDefaults(suiteName: "group.gateapp")?.string(forKey: "authorizationHeader") ?? ""
     
     @Published var mainGate: GateModel
     @Published var clubhouseGate: GateModel
